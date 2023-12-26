@@ -1,0 +1,128 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Vdark-cyan: hsl(179, 100%, 13%);
+  --p-white: hsla(0, 0%, 100%, 0.75);
+  --ligh-gray : hsl(0, 0%, 95%);
+  }
+  @font-face {
+  font-family: 'Lexend Deca';
+  font-weight: 400;
+  src: url(fonts/Lexend_Deca/static/LexendDeca-Regular.ttf) format('ttf');
+  }
+  @font-face {
+  font-family: 'Big_Shoulders';
+  font-weight: 800;
+  src: url(fonts/Big_Shoulders_Display/static/BigShouldersDisplay-ExtraBold.ttf) format('ttf');
+  }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Big_Shoulders';
+  font-size: 20px; 
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--ligh-gray);
+  }
+body {
+  font-family: 'Lexend Deca';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 2;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+article {
+  max-width: 300px;
+  /* height: 440px; */
+  padding: 3em;
+  position: relative;
+}
+img {
+  margin-bottom: .6em;
+}
+h1 {
+  margin-bottom: .6em;
+}
+ p {
+  font-family: 'Lexend Deca';
+color: var(--ligh-gray);
+}
+article.sedans {
+  background-color: var(--Bright-orange);
+  border-radius: 8px 0 0 8px;
+}
+article.suvs {
+  background-color: var(--Dark-cyan);
+}
+article.luxury {
+  background-color: var(--Vdark-cyan);
+  border-radius: 0 8px 8px 0;
+}
+button {
+  margin-top: 5.2em;
+  font-size: 14px;
+  font-family: 'Lexend Deca';
+  
+  background-color: var(--ligh-gray);
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+}
+.sedans button {
+  color: var(--Bright-orange);
+}
+.suvs button {
+  color: var(--Dark-cyan);
+}
+.luxury button {
+  color: var(--Vdark-cyan);
+}
+button:hover {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: var(--ligh-gray);
+  transition: 1s ease;
+}
+
+/*Mobile styling*/
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    margin-block: 22em;
+  }
+  article {
+  max-width: 300px;
+  height: 440px;
+  padding: 2em;
+  position: relative;
+}
+  article.sedans {
+    border-radius: 8px 8px 0 0;
+  }
+  article.luxury {
+    border-radius: 0 0 8px 8px;
+  }
+  button {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
